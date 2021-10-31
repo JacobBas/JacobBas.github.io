@@ -1,7 +1,11 @@
 ---
+# page view and themes
+theme: jekyll-theme-cayman
+
+# personal information
 name: Jacob Bas
-description: Personal website
+description: Personal website and blog
 repository: https://github.com/JacobBas/jacobbas.github.io
 timezone: America/Arizona
-
-theme: jekyll-theme-cayman
+github: https://github.com/JacobBas
+linkedin: https://www.linkedin.com/in/jacob-bas-52019714b/
