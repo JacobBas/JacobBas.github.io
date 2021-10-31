@@ -1,1 +1,5 @@
-theme: jekyll-theme-hacker
+---
+name: Jacob Bas
+description: Personal blog and website for my thoughts and projects
+repository: https://github.com/JacobBas/jacobbas.github.io
+timezone: America/Arizona
