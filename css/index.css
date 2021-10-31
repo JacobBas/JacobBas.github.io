@@ -90,7 +90,7 @@ header a {
 }
 
 header .title {
-  font-size: 2.2rem;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
   margin: 0.5rem 0;
 }
 
