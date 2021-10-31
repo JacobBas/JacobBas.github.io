@@ -2,6 +2,7 @@
 layout: post
 title:  "Writing Maintainable and Modular R Code"
 date:   2021-09-29 11:49:27 -0700
+description: Using the renv and box packages in R to contribute to more maintainable and modular R code in the case of larger R projects. 
 categories: 
 ---
 One of the largest problems that I have with writing R code is that it does not

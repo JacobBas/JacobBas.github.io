@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<main class="container">
+  <h2><a href="{{ page.url }}">{{ page.title }}</a></h3>
+  <span class="date">{{ page.date | date_to_long_string }}</span>
+  {{ content }}
+</main>
