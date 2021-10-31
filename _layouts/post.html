@@ -2,5 +2,8 @@
 layout: default
 ---
 
-<main>{{ content }}</main>
-<nav>is would be nice to put in navigation to other items here</nav>
+<main class="container">
+  <h2><a href="{{ page.url }}">{{ page.title }}</a></h3>
+  <span class="date">{{ page.date | date_to_long_string }}</span>
+  {{ content }}
+</main>

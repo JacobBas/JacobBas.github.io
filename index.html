@@ -3,7 +3,35 @@ layout: default
 permalink: /
 ---
 
-<div>
-  This is going to be the main page that will render stuff however I want it to
-  render
+<div class="container">
+  <h1>Hi, I'm Jacob Bas!</h1>
+</div>
+
+<div class="about-me">
+  <div class="container">
+    <p>
+      {{ site.about_me }} Click <a href="/about/">here</a> to learn more about
+      me!
+    </p>
+  </div>
+</div>
+
+<div class="blog">
+  <div class="container">
+    <h2>Recent Blog Posts</h2>
+    <div class="posts">
+      {% for post in paginator.posts %}
+      <div class="post">
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <span class="date">{{ post.date | date_to_long_string }}</span>
+        <p>
+          {% if post.description %} {{ post.description }} {% endif %}<a
+            href="{{ post.url }}"
+            >Read more ...</a
+          >
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>

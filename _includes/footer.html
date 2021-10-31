@@ -1,1 +1,33 @@
-<footer>WEBSITE FOOTER</footer>
+<footer>
+  <div>
+    <ul>
+      <li>
+        <a href="mailto:{{ site.links.email.name }}" target="_blank"
+          >{{ site.links.email.logo }}</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/{{ site.links.github.name }}"
+          target="_blank"
+          >{{ site.links.github.logo }}</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/{{ site.links.linkedin.name }}"
+          target="_blank"
+          >{{ site.links.linkedin.logo }}</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.instagram.com/{{ site.links.instagram.name }}"
+          target="_blank"
+          >{{ site.links.instagram.logo }}</a
+        >
+      </li>
+    </ul>
+    <span>{{ site.name }} Copyright © {{ site.year }}</span>
+  </div>
+</footer>
