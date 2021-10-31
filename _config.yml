@@ -3,3 +3,5 @@ name: Jacob Bas
 description: Personal website
 repository: https://github.com/JacobBas/jacobbas.github.io
 timezone: America/Arizona
+
+theme: jekyll-theme-cayman
