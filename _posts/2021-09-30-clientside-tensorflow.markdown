@@ -26,7 +26,7 @@ Tensorflow is best described on its [website](https://www.tensorflow.org/js) as
 
 To add Tensorflow.js to your project it is a simple as adding this cdn link to the top
 of an HTML file:
-```HTML
+```html
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0/dist/tf.min.js"></script>
 ```
 
