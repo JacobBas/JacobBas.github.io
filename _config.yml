@@ -1,35 +1,20 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+---
+# AUTHOR INFORMATION
+title: jacobbas.github.io
+name: Jacob Bas
+description: Personal blog and website to house my thoughts
+links:
+  email:
+    name: basjacob17@gmail.com
+  github:
+    name: JacobBas
+  linkedin:
+    name: jacob-bas-52019714b
+  instagram:
+    name: jacobthebas
 
-title: Jacob Bas
-email: basjacob17@gmail.com
-description: >-
-  Personal blog and website to house my thoughts! I like to code in Python, 
-  Javascript, and Go.
-github_username: JacobBas
-linkedin_username: jacob-bas-52019714b
-instagram_username: jacobthebas
-
-# Build settings
-theme: minima
-
-# PLUGINS
-plugins:
-  - jekyll-feed
+# BUILD SETTINGS
+collections:
+  posts:
+    permalink: "/news/:year/:month/:day/:title/"
+    output: true
