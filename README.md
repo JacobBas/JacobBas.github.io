@@ -1,1 +1,0 @@
-# Jacob Bas Jekyll Website
