@@ -115,53 +115,48 @@ Go has an extremely comprehensive standard library which allows software to be d
 On the surface Go seems like the perfect language for me since it enforces all of the things that I find important in code (low dependecy, verbose, and easily read), but it's usage in industry are not directly involved within the areas that I want to work in. Go is primarily used within distributed systems and concurent designs where I hope to build analytical software or software that is used for edge computing.
 
 ```go
-#include <iostream>
-#include <vector>
-using namespace std;
+package main
 
-void linearRegression(float *beta, vector<float> x, vector<float> y)
-{
-    // initializing the values
-    int n = x.size(), i;
-    float muX = 0, muY = 0, ssX = 0, sXY = 0;
+import "fmt"
 
-    // finding the mean of the x and y arrays
-    for (i = 0; i < n; i++)
-    {
-        muX += x[i];
-        muY += y[i];
-    }
-    muX = muX / n;
-    muY = muY / n;
+func linearRegression(beta *[2]float32, x []float32, y []float32) {
+	// initializing the values
+	n := len(x)
+	var muX, muY, ssX, sXY float32 = 0, 0, 0, 0
 
-    // finding the sum of squares
-    for (i = 0; i < n; i++)
-    {
-        ssX += (x[i] - muX) * (x[i] - muX);
-        sXY += (x[i] - muX) * (y[i] - muY);
-    }
+	// finding the mean of the x and y arrays
+	for i := 0; i < n; i++ {
+		muX += x[i]
+		muY += y[i]
+	}
+	muX = muX / float32(n)
+	muY = muY / float32(n)
 
-    // calcuating the beta values
-    beta[1] = sXY / ssX;
-    beta[0] = muY - (beta[1] * muX);
+	// finding the sum of squares
+	for i := 0; i < n; i++ {
+		ssX += (x[i] - muX) * (x[i] - muX)
+		sXY += (x[i] - muX) * (y[i] - muY)
+	}
+
+	// calcuating the beta values
+	(*beta)[1] = sXY / ssX
+	(*beta)[0] = muY - (beta[1] * muX)
+
 }
 
-int main()
-{
-    // initializing the data
-    vector<float> x = {1, 2, 3, 4, 5, 6, 7};
-    vector<float> y = {1, 2, 3, 4, 5, 6, 7};
+func main() {
+	// initializing the data
+	var x = []float32{1, 2, 3, 4, 5, 6, 7}
+	var y = []float32{1, 2, 3, 4, 5, 6, 7}
 
-    // initializing the return object
-    float beta[2];
-
-    // running the linear regression function
-    linearRegression(beta, x, y);
-
-    // printing out the results
-    cout << "b0: " << beta[0] << " b1: " << beta[1] << endl;
-
-    return 0;
+	// initializing the return object 
+	var beta [2]float32
+	
+	// running the linear regression function
+	linearRegression(&beta, x, y)
+	
+	// printing out the results
+	fmt.Println(beta)
 }
 ```
 
